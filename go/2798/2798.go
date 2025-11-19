@@ -19,9 +19,9 @@ func main() {
 	}
 
 	for i := range n - 2 {
-		for j := 1; j < n-1; j++ {
-			for k := 2; k < n; k++ {
-				if input[i]+input[j]+input[k] < m {
+		for j := i + 1; j < n-1; j++ {
+			for k := j + 1; k < n; k++ {
+				if input[i]+input[j]+input[k] <= m {
 					if input[i]+input[j]+input[k] >= max {
 						max = input[i] + input[j] + input[k]
 					}
